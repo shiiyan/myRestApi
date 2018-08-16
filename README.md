@@ -31,5 +31,5 @@ A store manager can *add*, *search for*, *update* and *delete* products data and
 |変更 <br />(update product image based on its id)   |POST         |/api/products/{id:[0-9]+}|curl -i -X POST -F "image=@/Users/shiiyan/Downloads/iphone8-gallery0-2018.jpeg" http://localhost/myRestApi/api/products/1||
 |削除 <br />(delete product based on its id)         |DELETE       |/api/products/{id:[0-9]+}|curl -i -X DELETE http://localhost/myRestApi/api/products/1||
 
-Other `curl` commands and sample images could be found in `metarials/shell-command.txt`.
+Other `curl` commands and sample images could be found in `materials/shell-command.txt`.
 
