@@ -21,9 +21,9 @@ A store manager can *add*, *search for*, *update* and *delete* products data and
 
 ## API Overview
 
-|Action|HTTP Method|Endpoint URL|Sample `curl` Command|Notice|
+|Action|HTTP Method|Endpoint URL|Sample `curl` Command|Notice   |
 |------|-----------|------------|---------------------|------|
-|登録 (add new products)|POST|/api/products|curl -i -X POST -F "name=iphone8" -F "detail=smartphones designed and marketed by Apple Inc." -F "price=74000" -F "image=@/Users/shiiyan/Downloads/iphone8-spgray-select-2018_AV1.png" http://localhost/myRestApi/api/products| File is transferred using format `multipart/form-data`. Binary files are required.|
+|登録 <br /> (add new products)|POST|/api/products|curl -i -X POST -F "name=iphone8" -F "detail=smartphones designed and marketed by Apple Inc." -F "price=74000" -F "image=@/Users/shiiyan/Downloads/iphone8-spgray-select-2018_AV1.png" http://localhost/myRestApi/api/products| File is transferred using format `multipart/form-data`. Binary files are required.|
 |検索 (retrieve all products)|GET|/api/products|curl -i -X GET http://localhost/myRestApi/api/products||
 |検索 (search for products with their name "i")|GET|/api/products/{name}|curl -i -X GET http://localhost/myRestApi/api/products/search/i|One may need to change permission of folder `/uploads` in order to download images.|
 |検索 (search for product with its id)|GET|/api/products/{id:[0-9]+}|curl -i -X GET http://localhost/myRestApi/api/products/search/1|`id` should be an integer|
