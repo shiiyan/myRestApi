@@ -1,0 +1,36 @@
+ ## Change permission of "uploads" folder
+ chmod a+w $PWD/uploads
+
+## Sending request to add new products
+curl -i -X POST -F "name=iphone8"\
+ -F "detail=smartphones designed and marketed by Apple Inc."\
+ -F "price=74000"\
+ -F "image=@/Users/shiiyan/Downloads/iphone8-spgray-select-2018_AV1.png" http://localhost/exercise-01-rest-api/api/products
+
+curl -i -X POST -F "name=iPad Pro"\
+ -F "detail=a line of iPad tablet computers designed, developed, and marketed by Apple Inc., that runs the iOS mobile operating system."\
+ -F "price=70390"\
+ -F "image=@/Users/shiiyan/Downloads/ipad-pro-10in-cell-select-spacegray-201706.png" http://localhost/exercise-01-rest-api/api/products
+
+curl -i -X POST -F "name=MacBook Pro"\
+ -F "detail=a line of Macintosh portable computers introduced in January 2006 by Apple Inc."\
+ -F "price=214704"\
+ -F "image=@/Users/shiiyan/Downloads/mbp13touch-space-select-201807_GEO_JP.jpeg" http://localhost/exercise-01-rest-api/api/products
+
+## Sending request to retrieve all products
+curl -i -X GET http://localhost/exercise-01-rest-api/api/products
+
+## Sending request to searches for products with their name "i"
+curl -i -X GET http://localhost/exercise-01-rest-api/api/products/search/i
+
+## Sending request to searches for product with its id
+curl -i -X GET http://localhost/exercise-01-rest-api/api/products/search/1
+
+## Sending request to update product data based on its id
+curl -i -X PUT -d '{"name":"iphone 8"}' http://localhost/exercise-01-rest-api/api/products/1
+
+## Sending request to update product image based on its id
+curl -i -X POST -F "image=@/Users/shiiyan/Downloads/iphone8-gallery0-2018.jpeg" http://localhost/exercise-01-rest-api/api/products/1
+
+## Sending request to delete product based on its id
+curl -i -X DELETE http://localhost/exercise-01-rest-api/api/products/1
