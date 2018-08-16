@@ -21,15 +21,15 @@ A store manager can *add*, *search for*, *update* and *delete* products data and
 
 ## API Overview
 
-|Action|HTTP Method|Endpoint URL|Sample `curl` Command|Notice   |
-|------|-----------|------------|---------------------|------|
-|登録 <br /> (add new products)|POST|/api/products|curl -i -X POST -F "name=iphone8" -F "detail=smartphones designed and marketed by Apple Inc." -F "price=74000" -F "image=@/Users/shiiyan/Downloads/iphone8-spgray-select-2018_AV1.png" http://localhost/myRestApi/api/products| File is transferred using format `multipart/form-data`. Binary files are required.|
-|検索 (retrieve all products)|GET|/api/products|curl -i -X GET http://localhost/myRestApi/api/products||
-|検索 (search for products with their name "i")|GET|/api/products/{name}|curl -i -X GET http://localhost/myRestApi/api/products/search/i|One may need to change permission of folder `/uploads` in order to download images.|
-|検索 (search for product with its id)|GET|/api/products/{id:[0-9]+}|curl -i -X GET http://localhost/myRestApi/api/products/search/1|`id` should be an integer|
-|変更 (update product data based on its id)|PUT|/api/products/{id:[0-9]+}|curl -i -X PUT -d '{"name":"iphone 8"}' http://localhost/myRestApi/api/products/1||
-|変更 (update product image based on its id)|POST|/api/products/{id:[0-9]+}|curl -i -X POST -F "image=@/Users/shiiyan/Downloads/iphone8-gallery0-2018.jpeg" http://localhost/myRestApi/api/products/1||
-|削除 (delete product based on its id)|DELETE|/api/products/{id:[0-9]+}|curl -i -X DELETE http://localhost/myRestApi/api/products/1||
+|Action                                             |HTTP Method  |Endpoint URL             |Sample `curl` Command  |Notice   |
+| ------------------------------------------------- | ----------- | ----------------------- | --------------------- | --------- |
+|登録 <br /> (add new products)                      |POST         |/api/products            |curl -i -X POST -F "name=iphone8" -F "detail=smartphones designed and marketed by Apple Inc." -F "price=74000" -F "image=@/Users/shiiyan/Downloads/iphone8-spgray-select-2018_AV1.png" http://localhost/myRestApi/api/products| File is transferred using format `multipart/form-data`. <br />Binary files are required.|
+|検索 <br />(retrieve all products)                  |GET          |/api/products            |curl -i -X GET http://localhost/myRestApi/api/products||
+|検索 <br />(search for products with their name "i")|GET          |/api/products/search/{name}     |curl -i -X GET http://localhost/myRestApi/api/products/search/i|One may need to change permission of folder `/uploads` in order to download images.|
+|検索 <br />(search for product with its id)         |GET          |/api/products/search/{id:[0-9]+}|curl -i -X GET http://localhost/myRestApi/api/products/search/1|`id` should be an integer|
+|変更 <br />(update product data based on its id)    |PUT          |/api/products/{id:[0-9]+}|curl -i -X PUT -d '{"name":"iphone 8"}' http://localhost/myRestApi/api/products/1||
+|変更 <br />(update product image based on its id)   |POST         |/api/products/{id:[0-9]+}|curl -i -X POST -F "image=@/Users/shiiyan/Downloads/iphone8-gallery0-2018.jpeg" http://localhost/myRestApi/api/products/1||
+|削除 <br />(delete product based on its id)         |DELETE       |/api/products/{id:[0-9]+}|curl -i -X DELETE http://localhost/myRestApi/api/products/1||
 
-Other `curl` commands could be found in `metarials/shell-command.txt`.
+Other `curl` commands and sample images could be found in `metarials/shell-command.txt`.
 
